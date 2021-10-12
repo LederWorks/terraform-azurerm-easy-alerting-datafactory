@@ -1,0 +1,4 @@
+<!-- markdownlint-disable-file MD033 MD012 -->
+# terraform-azurerm-easy-alerting-datafactory
+
+LederWorks Terraform Azure Easy Alerting Data Factory module.
