@@ -2,8 +2,8 @@ formatter: markdown document
 
 version: ""
 
-header-from: header.txt
-footer-from: footer.txt
+header-from: .content/header.txt
+footer-from: .content/footer.txt
 
 sections:
   show:
