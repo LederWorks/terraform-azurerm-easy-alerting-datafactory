@@ -1,0 +1,37 @@
+## Contributing
+
+* If you think you've found a bug in the code or you have a question regarding
+  the usage of this module, please reach out to us by opening an issue in
+  this GitHub repository.
+* Contributions to this project are welcome: if you want to add a feature or a
+  fix a bug, please do so by opening a Pull Request in this GitHub repository.
+  In case of feature contribution, we kindly ask you to open an issue to
+  discuss it beforehand.
+
+## License & Authors
+
+Author: Bence Bánó (@Ledermayer)
+
+```text
+MIT License
+
+Copyright (c) 2021 LederWorks
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
