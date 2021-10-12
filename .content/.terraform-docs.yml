@@ -32,8 +32,8 @@ content: |-
 
 
 output:
-  file: "README.MD"
-  mode: replace
+  file: ""
+  mode: inject
   template: |-
     <!-- BEGIN_TF_DOCS -->
     {{ .Content }}

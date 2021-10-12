@@ -14,5 +14,7 @@ jobs:
       with:
         working-dir: .
         config-file: .content/.terraform-docs.yml
+        output-file: README.md
+        output-method: inject
         git-push: "true"
         git-commit-message: "terraform-docs: autogenerate README.md"
