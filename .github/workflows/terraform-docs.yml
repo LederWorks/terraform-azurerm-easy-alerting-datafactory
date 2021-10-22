@@ -1,4 +1,4 @@
-name: Generate azurerm-easy-alerting-aks docs
+name: Generate azurerm-easy-alerting-aks documentation
 on:
   - pull_request
 jobs:

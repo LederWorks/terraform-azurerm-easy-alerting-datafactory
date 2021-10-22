@@ -9,6 +9,3 @@
 
 # Github Folder
 /.github/** @LederWorks/easy-terraform
-
-# Gitignore
-.gitignore @LederWorks/easy-terraform
