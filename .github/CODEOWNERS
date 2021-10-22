@@ -1,0 +1,11 @@
+# Global rule
+* @Ledermayer
+
+# All terraform code
+*.tf @LederWorks/easy-alerting
+
+# Content Folder
+/.content/** @LederWorks/easy-terraform
+
+# Github Folder
+/.github/** @LederWorks/easy-terraform

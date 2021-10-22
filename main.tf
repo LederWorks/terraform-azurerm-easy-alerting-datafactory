@@ -11,9 +11,9 @@
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-activity-runs-cancelled" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertActivityRunsCancelledCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertActivityRunsCancelledCreated == true ? 1 : 0
   name                = "DataFactory_Activity_Runs_Cancelled"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -73,9 +73,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-activity-runs-cancell
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-activity-runs-failed" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertActivityRunsFailedCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertActivityRunsFailedCreated == true ? 1 : 0
   name                = "DataFactory_Activity_Runs_Failed"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -135,9 +135,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-activity-runs-failed"
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-activity-runs-succeeded" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertActivityRunsSucceededCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertActivityRunsSucceededCreated == true ? 1 : 0
   name                = "DataFactory_Activity_Runs_Succeeded"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -201,9 +201,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-activity-runs-succeed
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-trigger-runs-cancelled" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertTriggerRunsCancelledCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertTriggerRunsCancelledCreated == true ? 1 : 0
   name                = "DataFactory_Trigger_Runs_Cancelled"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -251,9 +251,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-trigger-runs-cancelle
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-trigger-runs-failed" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertTriggerRunsFailedCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertTriggerRunsFailedCreated == true ? 1 : 0
   name                = "DataFactory_Trigger_Runs_Failed"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -301,9 +301,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-trigger-runs-failed" 
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-trigger-runs-succeeded" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertTriggerRunsSucceededCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertTriggerRunsSucceededCreated == true ? 1 : 0
   name                = "DataFactory_Trigger_Runs_Succeeded"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -354,9 +354,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-trigger-runs-succeede
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-cancelled" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertPipelineRunsCancelledCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertPipelineRunsCancelledCreated == true ? 1 : 0
   name                = "DataFactory_Pipeline_Runs_Cancelled"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -403,9 +403,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-cancell
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-failed" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertPipelineRunsFailedCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertPipelineRunsFailedCreated == true ? 1 : 0
   name                = "DataFactory_Pipeline_Runs_Failed"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -452,9 +452,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-failed"
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-succeeded" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertPipelineRunsSucceededCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertPipelineRunsSucceededCreated == true ? 1 : 0
   name                = "DataFactory_Pipeline_Runs_Succeeded"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -501,9 +501,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-succeed
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-elapsed-time" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertPipelineRunsElapsedTimeCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertPipelineRunsElapsedTimeCreated == true ? 1 : 0
   name                = "DataFactory_Pipeline_Runs_Elapsed_Time"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -554,9 +554,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-elapsed
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-available-memory" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertIntegrationAvailableMemoryCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertIntegrationAvailableMemoryCreated == true ? 1 : 0
   name                = "DataFactory_Integration_Available_Memory"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -575,7 +575,7 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-available
     threshold        = var.DataFactoryAlertIntegrationAvailableMemoryThreshold
 
     dimension {
-      name     = "IntegrationIntegrationName"
+      name     = "IntegrationRuntimeName"
       operator = "Include"
       values   = var.DataFactoryAlertIntegrationAvailableMemoryIntegrationNames
     }
@@ -603,9 +603,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-available
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-available-node-count" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertIntegrationAvailableNodeCountCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertIntegrationAvailableNodeCountCreated == true ? 1 : 0
   name                = "DataFactory_Integration_Available_Node_Count"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -624,7 +624,7 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-available
     threshold        = var.DataFactoryAlertIntegrationAvailableNodeCountThreshold
 
     dimension {
-      name     = "IntegrationIntegrationName"
+      name     = "IntegrationRuntimeName"
       operator = "Include"
       values   = var.DataFactoryAlertIntegrationAvailableNodeCountIntegrationNames
     }
@@ -647,9 +647,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-available
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-queue-duration" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertIntegrationQueueDurationCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertIntegrationQueueDurationCreated == true ? 1 : 0
   name                = "DataFactory_Integration_Queue_Duration"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -668,7 +668,7 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-queue-dur
     threshold        = var.DataFactoryAlertIntegrationQueueDurationThreshold
 
     dimension {
-      name     = "IntegrationIntegrationName"
+      name     = "IntegrationRuntimeName"
       operator = "Include"
       values   = var.DataFactoryAlertIntegrationQueueDurationIntegrationNames
     }
@@ -691,9 +691,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-queue-dur
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-queue-length" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertIntegrationQueueLengthCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertIntegrationQueueLengthCreated == true ? 1 : 0
   name                = "DataFactory_Integration_Queue_Length"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -712,7 +712,7 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-queue-len
     threshold        = var.DataFactoryAlertIntegrationQueueLengthThreshold
 
     dimension {
-      name     = "IntegrationIntegrationName"
+      name     = "IntegrationRuntimeName"
       operator = "Include"
       values   = var.DataFactoryAlertIntegrationQueueLengthIntegrationNames
     }
@@ -735,9 +735,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-queue-len
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-cpu-percentage" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertIntegrationCPUPercentageCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertIntegrationCPUPercentageCreated == true ? 1 : 0
   name                = "DataFactory_Integration_CPU_Percentage"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -756,7 +756,7 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-cpu-perce
     threshold        = var.DataFactoryAlertIntegrationCPUPercentageThreshold
 
     dimension {
-      name     = "IntegrationIntegrationName"
+      name     = "IntegrationRuntimeName"
       operator = "Include"
       values   = var.DataFactoryAlertIntegrationCPUPercentageIntegrationNames
     }
@@ -788,9 +788,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-cpu-perce
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-start-cancelled" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertSSISIntegrationStartCancelledCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertSSISIntegrationStartCancelledCreated == true ? 1 : 0
   name                = "DataFactory_SSIS_Integration_Start_Cancelled"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -831,9 +831,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-star
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-start-failed" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertSSISIntegrationStartFailedCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertSSISIntegrationStartFailedCreated == true ? 1 : 0
   name                = "DataFactory_SSIS_Integration_Start_Failed"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -874,9 +874,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-star
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-start-succeeded" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertSSISIntegrationStartSucceededCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertSSISIntegrationStartSucceededCreated == true ? 1 : 0
   name                = "DataFactory_SSIS_Integration_Start_Succeeded"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -917,9 +917,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-star
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-stop-stucked" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertSSISIntegrationStopStuckedCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertSSISIntegrationStopStuckedCreated == true ? 1 : 0
   name                = "DataFactory_SSIS_Integration_Stop_Stucked"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -960,9 +960,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-stop
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-stop-succeeded" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertSSISIntegrationStopSucceededCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertSSISIntegrationStopSucceededCreated == true ? 1 : 0
   name                = "DataFactory_SSIS_Integration_Stop_Succeeded"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -1007,9 +1007,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-stop
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-package-cancelled" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertSSISPackageCancelledCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertSSISPackageCancelledCreated == true ? 1 : 0
   name                = "DataFactory_SSIS_Package_Cancelled"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -1050,9 +1050,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-package-cancelle
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-package-failed" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertSSISPackageFailedCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertSSISPackageFailedCreated == true ? 1 : 0
   name                = "DataFactory_SSIS_Package_Failed"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -1093,35 +1093,35 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-package-failed" 
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-package-succeeded" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertSSISPackageSuccededCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertSSISPackageSucceededCreated == true ? 1 : 0
   name                = "DataFactory_SSIS_Package_Succeeded"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
   description         = "${var.DataFactoryName} SSIS Package Succeeded"
-  severity            = var.DataFactoryAlertSSISPackageSuccededSeverity
-  enabled             = var.DataFactoryAlertSSISPackageSuccededEnabled
-  frequency           = var.DataFactoryAlertSSISPackageSuccededFrequency
-  window_size         = coalesce(var.DataFactoryAlertSSISPackageSuccededWindow, var.DataFactoryAlertSSISPackageSuccededFrequency)
-  auto_mitigate       = var.DataFactoryAlertSSISPackageSuccededAutoResolve
+  severity            = var.DataFactoryAlertSSISPackageSucceededSeverity
+  enabled             = var.DataFactoryAlertSSISPackageSucceededEnabled
+  frequency           = var.DataFactoryAlertSSISPackageSucceededFrequency
+  window_size         = coalesce(var.DataFactoryAlertSSISPackageSucceededWindow, var.DataFactoryAlertSSISPackageSucceededFrequency)
+  auto_mitigate       = var.DataFactoryAlertSSISPackageSucceededAutoResolve
   
   criteria {
     metric_namespace = "Microsoft.DataFactory/factories"
     metric_name      = "SSISPackageExecutionSucceeded"
     aggregation      = "Total"
     operator         = "GreaterThan"
-    threshold        = var.DataFactoryAlertSSISPackageSuccededThreshold
+    threshold        = var.DataFactoryAlertSSISPackageSucceededThreshold
 
     dimension {
         name     = "IntegrationRuntimeName"
         operator = "Include"
-        values   = var.DataFactoryAlertSSISPackageSuccededRuntimeNames
+        values   = var.DataFactoryAlertSSISPackageSucceededRuntimeNames
     }
   }
 
   dynamic "action" {
-    for_each = var.DataFactoryAlertSSISPackageSuccededActionGroupIDs
+    for_each = var.DataFactoryAlertSSISPackageSucceededActionGroupIDs
     content {
         action_group_id = action.value
     }
@@ -1140,9 +1140,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-package-succeede
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-total-factory-size-gb" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertTotalFactorySizeGBCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertTotalFactorySizeGBCreated == true ? 1 : 0
   name                = "DataFactory_Total_Factory_Size_GB"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -1178,9 +1178,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-total-factory-size-gb
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-maximum-factory-size-gb" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertMaximumFactorySizeGBCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertMaximumFactorySizeGBCreated == true ? 1 : 0
   name                = "DataFactory_Maximum_Factory_Size_GB"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -1220,9 +1220,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-maximum-factory-size-
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-total-entities-count" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertTotalEntitiesCountCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertTotalEntitiesCountCreated == true ? 1 : 0
   name                = "DataFactory_Total_Entities_Count"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
@@ -1258,9 +1258,9 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-total-entities-count"
 
 resource "azurerm_monitor_metric_alert" "alert_datafactory-maximum-entities-count" {
   lifecycle {
-      ignore_changes = [tags.creation_timestamp]
+      ignore_changes = [tags]
     }
-  count               = var.DataFactoryAlertMaximumEntitiesCountCreated == false ? 0 : 1
+  count               = var.DataFactoryAlertMaximumEntitiesCountCreated == true ? 1 : 0
   name                = "DataFactory_Maximum_Entities_Count"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
