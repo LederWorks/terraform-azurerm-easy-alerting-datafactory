@@ -14,10 +14,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-activity-runs-cancell
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertActivityRunsCancelledCreated == true ? 1 : 0
-  name                = "DataFactory_Activity_Runs_Cancelled"
+  name                = "DataFactory_Activity_Runs_Cancelled-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Activity Runs Cancelled"
+  description         = "${var.DataFactoryName} Activity Runs Cancelled -${var.Purpose}"
   severity            = var.DataFactoryAlertActivityRunsCancelledSeverity
   enabled             = var.DataFactoryAlertActivityRunsCancelledEnabled
   frequency           = var.DataFactoryAlertActivityRunsCancelledFrequency
@@ -76,10 +76,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-activity-runs-failed"
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertActivityRunsFailedCreated == true ? 1 : 0
-  name                = "DataFactory_Activity_Runs_Failed"
+  name                = "DataFactory_Activity_Runs_Failed-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Activity Runs Failed"
+  description         = "${var.DataFactoryName} Activity Runs Failed -${var.Purpose}"
   severity            = var.DataFactoryAlertActivityRunsFailedSeverity
   enabled             = var.DataFactoryAlertActivityRunsFailedEnabled
   frequency           = var.DataFactoryAlertActivityRunsFailedFrequency
@@ -138,10 +138,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-activity-runs-succeed
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertActivityRunsSucceededCreated == true ? 1 : 0
-  name                = "DataFactory_Activity_Runs_Succeeded"
+  name                = "DataFactory_Activity_Runs_Succeeded-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Activity Runs Succeeded"
+  description         = "${var.DataFactoryName} Activity Runs Succeeded -${var.Purpose}"
   severity            = var.DataFactoryAlertActivityRunsSucceededSeverity
   enabled             = var.DataFactoryAlertActivityRunsSucceededEnabled
   frequency           = var.DataFactoryAlertActivityRunsSucceededFrequency
@@ -204,10 +204,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-trigger-runs-cancelle
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertTriggerRunsCancelledCreated == true ? 1 : 0
-  name                = "DataFactory_Trigger_Runs_Cancelled"
+  name                = "DataFactory_Trigger_Runs_Cancelled-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Trigger Runs Cancelled"
+  description         = "${var.DataFactoryName} Trigger Runs Cancelled -${var.Purpose}"
   severity            = var.DataFactoryAlertTriggerRunsCancelledSeverity
   enabled             = var.DataFactoryAlertTriggerRunsCancelledEnabled
   frequency           = var.DataFactoryAlertTriggerRunsCancelledFrequency
@@ -254,10 +254,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-trigger-runs-failed" 
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertTriggerRunsFailedCreated == true ? 1 : 0
-  name                = "DataFactory_Trigger_Runs_Failed"
+  name                = "DataFactory_Trigger_Runs_Failed-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Trigger Runs Failed"
+  description         = "${var.DataFactoryName} Trigger Runs Failed -${var.Purpose}"
   severity            = var.DataFactoryAlertTriggerRunsFailedSeverity
   enabled             = var.DataFactoryAlertTriggerRunsFailedEnabled
   frequency           = var.DataFactoryAlertTriggerRunsFailedFrequency
@@ -304,10 +304,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-trigger-runs-succeede
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertTriggerRunsSucceededCreated == true ? 1 : 0
-  name                = "DataFactory_Trigger_Runs_Succeeded"
+  name                = "DataFactory_Trigger_Runs_Succeeded-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Trigger Runs Succeeded"
+  description         = "${var.DataFactoryName} Trigger Runs Succeeded -${var.Purpose}"
   severity            = var.DataFactoryAlertTriggerRunsSucceededSeverity
   enabled             = var.DataFactoryAlertTriggerRunsSucceededEnabled
   frequency           = var.DataFactoryAlertTriggerRunsSucceededFrequency
@@ -357,10 +357,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-cancell
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertPipelineRunsCancelledCreated == true ? 1 : 0
-  name                = "DataFactory_Pipeline_Runs_Cancelled"
+  name                = "DataFactory_Pipeline_Runs_Cancelled-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Pipeline Runs Cancelled"
+  description         = "${var.DataFactoryName} Pipeline Runs Cancelled -${var.Purpose}"
   severity            = var.DataFactoryAlertPipelineRunsCancelledSeverity
   enabled             = var.DataFactoryAlertPipelineRunsCancelledEnabled
   frequency           = var.DataFactoryAlertPipelineRunsCancelledFrequency
@@ -406,10 +406,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-failed"
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertPipelineRunsFailedCreated == true ? 1 : 0
-  name                = "DataFactory_Pipeline_Runs_Failed"
+  name                = "DataFactory_Pipeline_Runs_Failed-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Pipeline Runs Failed"
+  description         = "${var.DataFactoryName} Pipeline Runs Failed -${var.Purpose}"
   severity            = var.DataFactoryAlertPipelineRunsFailedSeverity
   enabled             = var.DataFactoryAlertPipelineRunsFailedEnabled
   frequency           = var.DataFactoryAlertPipelineRunsFailedFrequency
@@ -455,10 +455,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-succeed
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertPipelineRunsSucceededCreated == true ? 1 : 0
-  name                = "DataFactory_Pipeline_Runs_Succeeded"
+  name                = "DataFactory_Pipeline_Runs_Succeeded-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Pipeline Runs Succeeded"
+  description         = "${var.DataFactoryName} Pipeline Runs Succeeded -${var.Purpose}"
   severity            = var.DataFactoryAlertPipelineRunsSucceededSeverity
   enabled             = var.DataFactoryAlertPipelineRunsSucceededEnabled
   frequency           = var.DataFactoryAlertPipelineRunsSucceededFrequency
@@ -504,10 +504,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-pipeline-runs-elapsed
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertPipelineRunsElapsedTimeCreated == true ? 1 : 0
-  name                = "DataFactory_Pipeline_Runs_Elapsed_Time"
+  name                = "DataFactory_Pipeline_Runs_Elapsed_Time-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Pipeline Runs Elapsed Time"
+  description         = "${var.DataFactoryName} Pipeline Runs Elapsed Time -${var.Purpose}"
   severity            = var.DataFactoryAlertPipelineRunsElapsedTimeSeverity
   enabled             = var.DataFactoryAlertPipelineRunsElapsedTimeEnabled
   frequency           = var.DataFactoryAlertPipelineRunsElapsedTimeFrequency
@@ -557,10 +557,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-available
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertIntegrationAvailableMemoryCreated == true ? 1 : 0
-  name                = "DataFactory_Integration_Available_Memory"
+  name                = "DataFactory_Integration_Available_Memory-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Integration Available Memory (B)"
+  description         = "${var.DataFactoryName} Integration Available Memory (B) -${var.Purpose}"
   severity            = var.DataFactoryAlertIntegrationAvailableMemorySeverity
   enabled             = var.DataFactoryAlertIntegrationAvailableMemoryEnabled
   frequency           = var.DataFactoryAlertIntegrationAvailableMemoryFrequency
@@ -606,10 +606,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-available
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertIntegrationAvailableNodeCountCreated == true ? 1 : 0
-  name                = "DataFactory_Integration_Available_Node_Count"
+  name                = "DataFactory_Integration_Available_Node_Count-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Integration Available Node Count"
+  description         = "${var.DataFactoryName} Integration Available Node Count -${var.Purpose}"
   severity            = var.DataFactoryAlertIntegrationAvailableNodeCountSeverity
   enabled             = var.DataFactoryAlertIntegrationAvailableNodeCountEnabled
   frequency           = var.DataFactoryAlertIntegrationAvailableNodeCountFrequency
@@ -650,10 +650,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-queue-dur
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertIntegrationQueueDurationCreated == true ? 1 : 0
-  name                = "DataFactory_Integration_Queue_Duration"
+  name                = "DataFactory_Integration_Queue_Duration-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Integration Queue Duration"
+  description         = "${var.DataFactoryName} Integration Queue Duration -${var.Purpose}"
   severity            = var.DataFactoryAlertIntegrationQueueDurationSeverity
   enabled             = var.DataFactoryAlertIntegrationQueueDurationEnabled
   frequency           = var.DataFactoryAlertIntegrationQueueDurationFrequency
@@ -694,10 +694,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-queue-len
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertIntegrationQueueLengthCreated == true ? 1 : 0
-  name                = "DataFactory_Integration_Queue_Length"
+  name                = "DataFactory_Integration_Queue_Length-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Integration Queue Length"
+  description         = "${var.DataFactoryName} Integration Queue Length -${var.Purpose}"
   severity            = var.DataFactoryAlertIntegrationQueueLengthSeverity
   enabled             = var.DataFactoryAlertIntegrationQueueLengthEnabled
   frequency           = var.DataFactoryAlertIntegrationQueueLengthFrequency
@@ -738,10 +738,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-integration-cpu-perce
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertIntegrationCPUPercentageCreated == true ? 1 : 0
-  name                = "DataFactory_Integration_CPU_Percentage"
+  name                = "DataFactory_Integration_CPU_Percentage-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Integration CPU Percentage"
+  description         = "${var.DataFactoryName} Integration CPU Percentage -${var.Purpose}"
   severity            = var.DataFactoryAlertIntegrationCPUPercentageSeverity
   enabled             = var.DataFactoryAlertIntegrationCPUPercentageEnabled
   frequency           = var.DataFactoryAlertIntegrationCPUPercentageFrequency
@@ -791,10 +791,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-star
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertSSISIntegrationStartCancelledCreated == true ? 1 : 0
-  name                = "DataFactory_SSIS_Integration_Start_Cancelled"
+  name                = "DataFactory_SSIS_Integration_Start_Cancelled-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} SSIS Integration Start Cancelled"
+  description         = "${var.DataFactoryName} SSIS Integration Start Cancelled -${var.Purpose}"
   severity            = var.DataFactoryAlertSSISIntegrationStartCancelledSeverity
   enabled             = var.DataFactoryAlertSSISIntegrationStartCancelledEnabled
   frequency           = var.DataFactoryAlertSSISIntegrationStartCancelledFrequency
@@ -834,10 +834,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-star
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertSSISIntegrationStartFailedCreated == true ? 1 : 0
-  name                = "DataFactory_SSIS_Integration_Start_Failed"
+  name                = "DataFactory_SSIS_Integration_Start_Failed-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} SSIS Integration Start Failed"
+  description         = "${var.DataFactoryName} SSIS Integration Start Failed -${var.Purpose}"
   severity            = var.DataFactoryAlertSSISIntegrationStartFailedSeverity
   enabled             = var.DataFactoryAlertSSISIntegrationStartFailedEnabled
   frequency           = var.DataFactoryAlertSSISIntegrationStartFailedFrequency
@@ -877,10 +877,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-star
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertSSISIntegrationStartSucceededCreated == true ? 1 : 0
-  name                = "DataFactory_SSIS_Integration_Start_Succeeded"
+  name                = "DataFactory_SSIS_Integration_Start_Succeeded-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} SSIS Integration Start Succeeded"
+  description         = "${var.DataFactoryName} SSIS Integration Start Succeeded -${var.Purpose}"
   severity            = var.DataFactoryAlertSSISIntegrationStartSucceededSeverity
   enabled             = var.DataFactoryAlertSSISIntegrationStartSucceededEnabled
   frequency           = var.DataFactoryAlertSSISIntegrationStartSucceededFrequency
@@ -920,10 +920,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-stop
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertSSISIntegrationStopStuckedCreated == true ? 1 : 0
-  name                = "DataFactory_SSIS_Integration_Stop_Stucked"
+  name                = "DataFactory_SSIS_Integration_Stop_Stucked-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} SSIS Integration Stop Stucked"
+  description         = "${var.DataFactoryName} SSIS Integration Stop Stucked -${var.Purpose}"
   severity            = var.DataFactoryAlertSSISIntegrationStopStuckedSeverity
   enabled             = var.DataFactoryAlertSSISIntegrationStopStuckedEnabled
   frequency           = var.DataFactoryAlertSSISIntegrationStopStuckedFrequency
@@ -963,10 +963,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-integration-stop
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertSSISIntegrationStopSucceededCreated == true ? 1 : 0
-  name                = "DataFactory_SSIS_Integration_Stop_Succeeded"
+  name                = "DataFactory_SSIS_Integration_Stop_Succeeded-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} SSIS Integration Stop Succeeded"
+  description         = "${var.DataFactoryName} SSIS Integration Stop Succeeded -${var.Purpose}"
   severity            = var.DataFactoryAlertSSISIntegrationStopSucceededSeverity
   enabled             = var.DataFactoryAlertSSISIntegrationStopSucceededEnabled
   frequency           = var.DataFactoryAlertSSISIntegrationStopSucceededFrequency
@@ -1010,10 +1010,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-package-cancelle
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertSSISPackageCancelledCreated == true ? 1 : 0
-  name                = "DataFactory_SSIS_Package_Cancelled"
+  name                = "DataFactory_SSIS_Package_Cancelled-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} SSIS Package Cancelled"
+  description         = "${var.DataFactoryName} SSIS Package Cancelled -${var.Purpose}"
   severity            = var.DataFactoryAlertSSISPackageCancelledSeverity
   enabled             = var.DataFactoryAlertSSISPackageCancelledEnabled
   frequency           = var.DataFactoryAlertSSISPackageCancelledFrequency
@@ -1053,10 +1053,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-package-failed" 
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertSSISPackageFailedCreated == true ? 1 : 0
-  name                = "DataFactory_SSIS_Package_Failed"
+  name                = "DataFactory_SSIS_Package_Failed-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} SSIS Package Failed"
+  description         = "${var.DataFactoryName} SSIS Package Failed -${var.Purpose}"
   severity            = var.DataFactoryAlertSSISPackageFailedSeverity
   enabled             = var.DataFactoryAlertSSISPackageFailedEnabled
   frequency           = var.DataFactoryAlertSSISPackageFailedFrequency
@@ -1096,10 +1096,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-ssis-package-succeede
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertSSISPackageSucceededCreated == true ? 1 : 0
-  name                = "DataFactory_SSIS_Package_Succeeded"
+  name                = "DataFactory_SSIS_Package_Succeeded-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} SSIS Package Succeeded"
+  description         = "${var.DataFactoryName} SSIS Package Succeeded -${var.Purpose}"
   severity            = var.DataFactoryAlertSSISPackageSucceededSeverity
   enabled             = var.DataFactoryAlertSSISPackageSucceededEnabled
   frequency           = var.DataFactoryAlertSSISPackageSucceededFrequency
@@ -1143,10 +1143,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-total-factory-size-gb
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertTotalFactorySizeGBCreated == true ? 1 : 0
-  name                = "DataFactory_Total_Factory_Size_GB"
+  name                = "DataFactory_Total_Factory_Size_GB-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Total Factory Size (GB)"
+  description         = "${var.DataFactoryName} Total Factory Size (GB) -${var.Purpose}"
   severity            = var.DataFactoryAlertTotalFactorySizeGBSeverity
   enabled             = var.DataFactoryAlertTotalFactorySizeGBEnabled
   frequency           = var.DataFactoryAlertTotalFactorySizeGBFrequency
@@ -1181,10 +1181,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-maximum-factory-size-
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertMaximumFactorySizeGBCreated == true ? 1 : 0
-  name                = "DataFactory_Maximum_Factory_Size_GB"
+  name                = "DataFactory_Maximum_Factory_Size_GB-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Maximum Factory Size (GB)"
+  description         = "${var.DataFactoryName} Maximum Factory Size (GB) -${var.Purpose}"
   severity            = var.DataFactoryAlertMaximumFactorySizeGBSeverity
   enabled             = var.DataFactoryAlertMaximumFactorySizeGBEnabled
   frequency           = var.DataFactoryAlertMaximumFactorySizeGBFrequency
@@ -1223,10 +1223,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-total-entities-count"
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertTotalEntitiesCountCreated == true ? 1 : 0
-  name                = "DataFactory_Total_Entities_Count"
+  name                = "DataFactory_Total_Entities_Count-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Total Entities Count"
+  description         = "${var.DataFactoryName} Total Entities Count -${var.Purpose}"
   severity            = var.DataFactoryAlertTotalEntitiesCountSeverity
   enabled             = var.DataFactoryAlertTotalEntitiesCountEnabled
   frequency           = var.DataFactoryAlertTotalEntitiesCountFrequency
@@ -1261,10 +1261,10 @@ resource "azurerm_monitor_metric_alert" "alert_datafactory-maximum-entities-coun
       ignore_changes = [tags]
     }
   count               = var.DataFactoryAlertMaximumEntitiesCountCreated == true ? 1 : 0
-  name                = "DataFactory_Maximum_Entities_Count"
+  name                = "DataFactory_Maximum_Entities_Count-${var.Purpose}"
   resource_group_name = var.DataFactoryResourceGroupObject.name 
   scopes              = ["/subscriptions/${var.SubscriptionID}/resourceGroups/${var.DataFactoryResourceGroupObject.name}/providers/Microsoft.DataFactory/factories/${var.DataFactoryName}"]
-  description         = "${var.DataFactoryName} Maximum Entities Count"
+  description         = "${var.DataFactoryName} Maximum Entities Count -${var.Purpose}"
   severity            = var.DataFactoryAlertMaximumEntitiesCountSeverity
   enabled             = var.DataFactoryAlertMaximumEntitiesCountEnabled
   frequency           = var.DataFactoryAlertMaximumEntitiesCountFrequency

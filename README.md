@@ -2386,6 +2386,14 @@ Type: `any`
 
 Default: `null`
 
+### <a name="input_Purpose"></a> [Purpose](#input\_Purpose)
+
+Description: The purpose of the alert. Will be used in alert name and description.
+
+Type: `string`
+
+Default: `null`
+
 ## Outputs
 
 No outputs.
