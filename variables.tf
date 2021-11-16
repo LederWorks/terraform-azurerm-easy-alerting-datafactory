@@ -8,6 +8,13 @@ variable "SubscriptionID" {
   }
 }
 
+#### Purpose ####
+variable "Purpose" {
+  description = "The purpose of the alert. Will be used in alert name and description."
+  type = string
+  default = null
+}
+
 #### Tags ####
 variable "Tags" {
   description = "BYO Tags, preferrable from a local on your side :D"
